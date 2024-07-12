@@ -10,10 +10,13 @@ import SwiftUI
 struct ImageBootCamp: View {
     var body: some View {
             Image("budda1")
+            .renderingMode(.template)
+//            .renderingMode(.original)
             .resizable()
             .aspectRatio(contentMode: .fit)
             .background(.blue.opacity(0.4))
-            .blur(radius: 1.3)
+            .foregroundColor(.red) // * work with above renderingMode
+//            .blur(radius: 1.3)
 //            .cornerRadius(50)
             .clipShape(
 //                /*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/
@@ -22,11 +25,11 @@ struct ImageBootCamp: View {
                 Ellipse()
             )
             .frame(width: 200)
-            .shadow(
-                color: Color(.blue).opacity(0.4),
-                radius: CGFloat(0),
-                x: CGFloat(8), y: CGFloat(8))
-            
+//            .shadow(
+//                color: Color(.blue).opacity(0.4),
+//                radius: CGFloat(0),
+//                x: CGFloat(8), y: CGFloat(8))
+//            
 
 //            .clipped()
     }
